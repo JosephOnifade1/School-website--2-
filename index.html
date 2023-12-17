@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>School Website</title>
+  <style>
+    /* Existing styles */
+  
+    .register-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .register-button:hover {
+      background-color: #00587a;
+    }
+    /* Styles for the chat button */
+    .chat-button {
+      background-color: #59a15c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding-right: 12px;
+    }
+    
+    /* Styles for the chat modal */
+    .chat-modal {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: 1000;
+      width: 300px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    /* Close button inside the chat modal */
+    .close-button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    /* Styles for the chat input and output */
+    .chat-input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      outline: none;
+    }
+    
+    .chat-output {
+      margin-bottom: 10px;
+    }
+    
+    /* Styles for the send button */
+    .send-button {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      outline: none;
+    }
+    
+    .send-button:hover {
+      background-color: #00587a;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>JOSEPH SCHOOL</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration-form.html">Register</a></li>
+      </ul>
+      
+    </nav>
+  </header>
+  <div class="dropdown-menu">
+    <div class="dropdown">
+      <div class="dots-icon">&#8286;&#8286;&#8286;</div>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="registration-form.html">Register</a>
+        <a href="calendar.html">Academic Calendar</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="art-workshop.html">Art Workshop</a>
+        <a href="science-club.html">Science Club</a>
+        <a href="commercial-club.html">Commercil Club</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h2>Welcome to Our School</h2>
+    <p>Providing quality education for a brighter future.</p>
+  </section>
+  <section class="featured-section">
+    <h2>Featured Programs</h2>
+  
+    <div class="program">
+      <a href="science-club.html" class="program"><img src="/images.jpeg" alt="Science Club">
+      <h3>Science Club</h3></a>
+      <p>Explore the wonders of science through exciting experiments and hands-on activities.</p>
+    </div>
+  
+    <div class="program">
+      <a href="art-workshop.html" class="program"><img src="/images (1).jpeg" alt="Art Workshop">
+      <h3>Art Workshop</h3></a>
+      <p>Unleash your creativity in our art workshops, where you can express yourself through various art forms.</p>
+    </div>
+    
+    <div class="program">
+      <a href="commercial-club.html" class="program"><img src="/download.png" alt="Commercial Club">
+      <h3>Commercial Club</h3></a>
+      <p>Boost your management skills in our commercial club, where you can express yourself through various interesting subjects.
+      </p>
+    </div>
+
+  
+    <!-- Add more featured programs as needed -->
+    
+     <!-- Register Now button linked to the application form -->
+     <a href="registration-form.html" class="register-button">Register Now</a>
+  
+  </section>
+  <section class="commercial">
+        <h2>Featured Commercial</h2>
+        <p>Check out our latest program! Enroll now and experience the best in education.</p>
+        <button onclick="redirectToCommercial()">Watch Now</button>
+    </section>
+    <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Science Fair - March 15, 2023</li>
+            <li>Annual Art Exhibition - April 20, 2023</li>
+            <li>Sports Day - May 5, 2023</li>
+        </ul>
+    </section>
+
+    <section class="student-testimonials">
+        <h2>Student Testimonials</h2>
+        <div class="testimonial">
+            <blockquote>
+                "I love being part of this school! The teachers are amazing, and there are so many opportunities for
+                learning and personal growth."
+            </blockquote>
+            <p class="student-name">John Doe, Grade 10</p>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "The extracurricular activities here are fantastic. I've made great friends and learned so much beyond
+                the classroom."
+            </blockquote>
+            <p class="student-name">Jane Smith, Grade 8</p>
+        </div>
+    </section>
+    
+
+    <section class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="calendar.html">Academic Calendar</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </section>
+
+
+
+    <section><footer>
+    <p>&copy; 2023 School Name. All rights reserved.</p>
+             </footer>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      function redirectToCommercial() {
+        // Add a link to your commercial video or promotional content
+        window.location.href = 'commercial.html';
+      }
+    </script>
+     <!-- AI Chat button -->
+     <button class="chat-button" onclick="openChat()">Ask Questions</button>
+      <!-- Chat modal -->
+    <div class="chat-modal" id="chatModal">
+        <span onclick="closeChat()" class="close-button">&times;</span>
+        <!-- Chat content -->
+        <div id="chatContent">
+            <div class="chat-output">Welcome to our AI Chat! How can I assist you today?</div>
+        </div>
+        <input type="text" class="chat-input" id="userInput" placeholder="Type your question...">
+        <button onclick="sendUserInput()">Send</button>
+    </div>
+
+     <script>
+       // JavaScript functions for opening and closing the chat modal
+       function openChat() {
+         document.getElementById("chatModal").style.display = "block";
+       }
+    
+       function closeChat() {
+         document.getElementById("chatModal").style.display = "none";
+       }
+       // JavaScript function to handle user input
+       async function sendUserInput() {
+         const userInput = document.getElementById("userInput").value;
+         document.getElementById("chatContent").innerHTML += `<div class="chat-output"><strong>You:</strong> ${userInput}</div>`;
+       
+         // Call the OpenAI ChatGPT API
+         const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+         const apiUrl = 'https://api.openai.com/v1/chat/completions';
+       
+         const response = await fetch(apiUrl, {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json',
+             'Authorization': `Bearer ${apiKey}`
+           },
+           body: JSON.stringify({
+             model: 'gpt-3.5-turbo',
+             messages: [
+               { role: 'system', content: 'You are a helpful assistant.' },
+               { role: 'user', content: userInput }
+                           ]
+           })
+         });
+       
+         const responseData = await response.json();
+       
+         // Display the AI's response
+         document.getElementById("chatContent").innerHTML += `<div class="chat-output"><strong>AI:</strong> ${responseData.choices[0].message.content}</div>`;
+       
+         // Clear the user input field
+         document.getElementById("userInput").value = "";
+       }
+     </script>
+     <script>
+       // Questions and predefined answers
+       const qaPairs = [
+         { question: 'What courses do you offer?', answer: 'We offer a variety of courses including Math, Science, Literature, and more.' },
+         { question: 'How can I apply for admission?', answer: 'You can apply for admission through our online application form on the website.' },
+                 // Add more question-answer pairs as needed
+             ];
+     
+       // JavaScript functions for opening and closing the chat modal
+       function openChat() {
+         document.getElementById("chatModal").style.display = "block";
+       }
+     
+       function closeChat() {
+         document.getElementById("chatModal").style.display = "none";
+       }
+     
+       // JavaScript function to handle user input
+       function sendUserInput() {
+         const userInput = document.getElementById("userInput").value;
+         document.getElementById("chatContent").innerHTML += `<div class="chat-output"><strong>You:</strong> ${userInput}</div>`;
+     
+         // Check if there's a predefined answer for the user's input
+         const matchedAnswer = qaPairs.find(pair => userInput.toLowerCase().includes(pair.question.toLowerCase()));
+     
+         // Display the AI's response
+         if (matchedAnswer) {
+           document.getElementById("chatContent").innerHTML += `<div class="chat-output"><strong>AI:</strong> ${matchedAnswer.answer}</div>`;
+         } else {
+           document.getElementById("chatContent").innerHTML += `<div class="chat-output"><strong>AI:</strong> I'm sorry, I don't have information on that topic.</div>`;
+         }
+     
+         // Clear the user input field
+         document.getElementById("userInput").value = "";
+       }
+     </script>
+</body>
+
+</html>

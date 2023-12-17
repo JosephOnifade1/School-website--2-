@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>School Registration Form</title>
+  <!-- Add any additional styles specific to the registration form if needed -->
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>School Registration Form</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+  
+      header {
+        background-color: #007acc;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        padding-top: 1px;
+        padding-bottom: 7px;
+      }
+  
+      form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+  
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .take-note{
+        text-align: center;
+        box-shadow: #007acc;
+        margin: 19px auto;
+        border-radius: 25px;
+        background-color: #e216162a;
+        
+      }
+      .note,ul{
+        color: rgb(199, 41, 21);
+        padding-top: 1px;
+        padding-right: 20px;
+      }
+      footer {
+        background-color: #007acc;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        position: static;
+        bottom: 0;
+        width: 100%;
+        padding-top: 7px;
+        padding-bottom: 10px;
+      }
+      .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius:100px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .button:hover{
+        background-color: #572e2e;
+      }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>School Registration Form</h1>
+  </header>
+
+  <form id="myForm" onsubmit="return validateForm()">
+
+    <!-- Replace "process-registration.php" with the actual backend script for form processing -->
+
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" placeholder="Surname Firstname Lastname " required>
+
+    <label for="parentName">Parent/Guardian Name:</label>
+    <input type="text" id="parentName" name="parentName" placeholder="Surname Firtsname"  required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email,e.g'example@gmail.com'" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Parent/Guardian number" required>
+    
+
+    <label for="gradeLevel">Grade Level:</label>
+    <select id="gradeLevel" name="gradeLevel" required>
+      <option value="sss1">SSS 1</option>
+      <option value="sss2">SSS 2</option>
+      <option value="sss3">SSS 3</option>
+      <!-- Add more grade options as needed -->
+    </select>
+    
+    <label for="department">Department:</label>
+    <select id="department" name="department" required>
+      <option value="scienceclub">Science club</option>
+      <option value="artworkshop">Art Workshop</option>
+      <option value="commercialclub">Commercial club</option>
+      <!-- Add more grade options as needed -->
+    </select>
+
+    <label for="additionalInfo">Additional Information:</label>
+    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="(Optional)"></textarea>
+    <br><br><br>
+    <input type="submit" value="Submit" class="button">
+  </form>
+  <div class="take-note">
+    <b><strong><p class="note">Note:</p></strong>
+      <h3>Once you click the submit button our admins will recieve your informations and send you an email within two days.</h3>
+      <p>The email message will consist of all the information you need including the followings;</p></p>
+      <ul>
+        <li>Our school location</li>
+        <li>Your Entrance Examination date</li>
+        <li>Our codes and conducts</li>
+        <li>Fees and payment details</li>
+      </ul>
+    </b>
+  </div>
+  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2023 School Name. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
